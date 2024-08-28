@@ -1,15 +1,16 @@
-//document.getElementById("count-el").innerText = 5
+const  panels = document.querySelectorAll('.panel')
 
-// let firstBatch = 5
-// let secoundBatch = 7
+console.log(panels)
 
-// let count = firstBatch + secoundBatch
+panels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+        removeActiveClasses()
+        panel.classList.add('active')
+    })
+})
 
-// console.log(count)
-
-let myage = 40
-let humanDogRatio = 7
-
-let myDogAge = myage * humanDogRatio
-
-console.log(myDogAge)
+function removeActiveClasses() {
+    panels.forEach((panel) => {
+        panel.classList.remove('active')
+    })  
+}
